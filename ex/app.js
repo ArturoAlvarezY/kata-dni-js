@@ -8,7 +8,7 @@ const letterDni = [
       this.num = num;
     }
   
-    _validateNumber(num) {
+    _validateNumber =(num)=> {
       if (!Number.isInteger(num) || num < 0 || num > 99999999) {
         throw new Error("El número de DNI ingresado es incorrecto. Debe ser un entero entre 0 y 99,999,999.");
       }
@@ -19,7 +19,7 @@ const letterDni = [
       return letterDni[remainder];
     }
   
-    calculateLetter() {
+    calculateLetter=()=> {
       console.log(
         `Número: ${this.num}, Resto: ${this.num % 23}, Letra: ${this.letter}`
       );
